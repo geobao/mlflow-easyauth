@@ -6,11 +6,11 @@ COPY ./requirements.txt ./requirements.txt
 RUN set -x \
     && apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y \
+    build-essential libssl-dev libffi-dev python3-dev cargo \
     python3 python3-pip python3-setuptools python3-pandas supervisor gettext-base nginx apache2-utils python3-psycopg2 \
     && pip3 install wheel \
     && pip3 install -r requirements.txt \
     && apt-get remove --purge --auto-remove -y ca-certificates && rm -rf /var/lib/apt/lists/*
-
 
 # WWW (nginx)
 RUN addgroup -gid 1000 www \
