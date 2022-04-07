@@ -83,7 +83,7 @@ to have it go to your GCS bucket.
 Clone this git repo
 
 ```
-git clone https://github.com/soundsensing/mlflow-easyauth.git
+git clone https://github.com/geobao/mlflow-easyauth.git
 cd mlflow-easyauth.git
 ```
 
